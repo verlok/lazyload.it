@@ -1,15 +1,15 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://myurl.com/",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "title": "Lazy load it!",
+  "url": "https://lazyload.it/",
+  "description": "All the techniques and best practices to optimize performance on your websites and preserve SEO.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "All the techniques and best practices to optimize performance on your websites and preserve SEO.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://myurl.com/"
+    "id": "https://lazyload.it/"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com"
+    "name": "Andrea Verlicchi",
+    "email": "andrea.verlicchi@gmail.com"
   }
 }

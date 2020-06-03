@@ -5,7 +5,9 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Latest 3 Posts</h1>
+<h1>Lazy-load it!</h1>
+
+<p>Here you can find tutorials, techniques and best practices to lazy-load pretty much everything is not immediately visible to your users, to optimize performance on your websites while preserving SEO.</p>
 
 {% set postslist = collections.posts | head(-3) %}
 {% set postslistCounter = collections.posts | length %}

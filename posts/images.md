@@ -23,7 +23,7 @@ Make it lazy by changing `src` to `data-src`:
   alt="A lazy image" />
 ```
 
-Add vanilla-lazyload via a script tag, if you don't have it already.
+Add vanilla-lazyload via a `script` tag, if you didn't already.
 
 ```html
 <script
@@ -33,7 +33,7 @@ Add vanilla-lazyload via a script tag, if you don't have it already.
 
 And initialize it with the `new` keyword, eventyally passing some options:
 
-```js
+```js/1
 var lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy",
   // ... more custom settings?

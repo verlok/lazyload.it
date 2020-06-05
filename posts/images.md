@@ -33,7 +33,7 @@ Add vanilla-lazyload via a `script` tag, if you didn't already.
 
 And initialize it with the `new` keyword, eventyally passing some options:
 
-```js/1
+```js
 var lazyLoadInstance = new LazyLoad({
   elements_selector: ".lazy",
   // ... more custom settings?

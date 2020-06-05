@@ -45,9 +45,6 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
-p:last-child {
-  margin-bottom: 0;
-}
 p,
 .tmpl-post li,
 img {
@@ -74,14 +71,6 @@ main :first-child {
 }
 header {
   border-bottom: 1px dashed var(--lightgray);
-}
-footer {
-  border-top: 1px dashed var(--lightgray);
-}
-footer p {
-  padding: 0;
-  margin: var(--unit);
-  text-align: right;
 }
 header:after {
   content: "";
@@ -272,4 +261,12 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+footer {
+  border-top: 1px dashed var(--lightgray);
+}
+footer p {
+  margin: var(--unit);
+  text-align: right;
 }

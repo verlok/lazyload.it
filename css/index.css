@@ -27,6 +27,9 @@ p,
 img {
   max-width: 37.5em; /* 600px /16 */
 }
+pre[class*="language-"] {
+  max-width: 50em;
+}
 p,
 .tmpl-post li {
   line-height: 1.45;
@@ -46,6 +49,14 @@ main :first-child {
 header {
   border-bottom: 1px dashed var(--lightgray);
 }
+footer {
+  border-top: 1px dashed var(--lightgray);
+}
+footer p {
+  padding: 0;
+  margin: 1em;
+  text-align: right;
+}
 header:after {
   content: "";
   display: table;
@@ -61,7 +72,7 @@ table th {
 
 pre,
 code {
-  font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
+  font-family: "JetBrains Mono", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
     "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
     "Courier New", Courier, monospace;
@@ -85,6 +96,12 @@ pre {
   padding: 1em;
   margin: 0.5em 0;
   background-color: #f6f6f6;
+}
+:not(pre) > code {
+  padding: .2em .3em;
+  background-color: #eee;
+  border-radius: 5px;
+  font-size: 14px;
 }
 .highlight-line {
   display: block;

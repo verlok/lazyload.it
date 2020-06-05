@@ -45,14 +45,11 @@ body {
   color: var(--darkgray);
   background-color: var(--white);
 }
-p,
-.tmpl-post li,
-img {
-  max-width: 37.5em; /* 600px /16 */
+body {
+  max-width: 600px;
+  margin: 0 auto;
 }
-pre[class*="language-"] {
-  max-width: 50em;
-}
+
 p,
 .tmpl-post li {
   line-height: 1.45;

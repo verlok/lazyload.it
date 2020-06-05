@@ -264,6 +264,7 @@ a[href].direct-link:focus:visited,
 }
 
 footer {
+  font-size: 14px;
   border-top: 1px dashed var(--lightgray);
 }
 footer p {

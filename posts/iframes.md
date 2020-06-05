@@ -1,42 +1,36 @@
 ---
-title: Images
-description: How to lazy load images on your website
+title: iFrames
+description: How to lazy load iframes on your website
 date: 2020-06-03
 tags:
-  - images
+  - iframes
   - lazyload
 layout: layouts/post.njk
 ---
 
-This is a regular image:
+This is a regular iframe:
 
 ```html
-<img
-  src="lazy.jpg"
-  alt="An image" />
+<iframe src="lazyFrame.html"></iframe>
 ```
 
 Make it lazy by changing `src` to `data-src` and also adding a `lazy` class to it. Like this:
 
 ```html
-<img class="lazy"
-  data-src="lazy.jpg"
-  alt="A lazy image" />
+<iframe class="lazy" data-src="lazyFrame.html"></iframe>
 ```
 
 Add vanilla-lazyload via a `script` tag, if you don't have it already.
 
 ```html
-<script
-  src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@16.1.0/dist/lazyload.min.js">
-</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@16.1.0/dist/lazyload.min.js"></script>
 ```
 
 And initialize it with the `new` keyword, eventually passing some options:
 
 ```js
 var lazyLoadInstance = new LazyLoad({
-  elements_selector: ".lazy"
+  elements_selector: ".lazy",
 });
 ```
 

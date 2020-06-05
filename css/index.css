@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Merriweather Regular"), local("Merriweather-Regular"),
+    url(https://fonts.gstatic.com/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-ciZMZ-Y.woff2)
+      format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+    U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Merriweather Regular"), local("Merriweather-Regular"),
+    url(https://fonts.gstatic.com/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZM.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
+}
+
 :root {
   --red: #c5004a;
   --darkred: #7f0036;
@@ -7,6 +31,8 @@
   --navy: #17050f;
   --blue: #082840;
   --white: #fff;
+
+  --unit: 16px;
 }
 * {
   box-sizing: border-box;
@@ -15,7 +41,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: Merriweather, serif;
   color: var(--darkgray);
   background-color: var(--white);
 }
@@ -41,7 +67,7 @@ a[href]:visited {
   color: var(--navy);
 }
 main {
-  padding: 1rem;
+  padding: var(--unit);
 }
 main :first-child {
   margin-top: 0;
@@ -54,7 +80,7 @@ footer {
 }
 footer p {
   padding: 0;
-  margin: 1em;
+  margin: var(--unit);
   text-align: right;
 }
 header:after {
@@ -63,7 +89,7 @@ header:after {
   clear: both;
 }
 table {
-  margin: 1em 0;
+  margin: var(--unit) 0;
 }
 table td,
 table th {
@@ -72,10 +98,10 @@ table th {
 
 pre,
 code {
-  font-family: "JetBrains Mono", Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono",
-    "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono",
-    "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L",
-    "Courier New", Courier, monospace;
+  font-family: "JetBrains Mono", Consolas, Menlo, Monaco, "Andale Mono WT",
+    "Andale Mono", "Lucida Console", "Lucida Sans Typewriter",
+    "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono",
+    "Nimbus Mono L", "Courier New", Courier, monospace;
   line-height: 1.5;
 }
 pre {
@@ -98,7 +124,7 @@ pre {
   background-color: #f6f6f6;
 }
 :not(pre) > code {
-  padding: .2em .3em;
+  padding: 0.2em 0.3em;
   background-color: #eee;
   border-radius: 5px;
   font-size: 14px;
@@ -108,6 +134,10 @@ pre {
   padding: 0.125em 1em;
   text-decoration: none; /* override del, ins, mark defaults */
   color: inherit; /* override del, ins, mark defaults */
+}
+main > h1 {
+  font-family: system-ui, sans-serif;
+  text-transform: uppercase;
 }
 
 /* allow highlighting empty lines */
@@ -136,10 +166,10 @@ pre {
 
 /* Header */
 .home {
-  padding: 0 1rem;
+  padding: 0 var(--unit);
   float: left;
-  margin: 1rem 0; /* 16px /16 */
-  font-size: 1em; /* 16px /16 */
+  margin: var(--unit) 0;
+  font-size: var(--unit);
 }
 .home :link:not(:hover) {
   text-decoration: none;
@@ -150,11 +180,11 @@ pre {
   padding: 0;
   list-style: none;
   float: left;
-  margin-left: 1em;
+  margin-left: var(--unit);
 }
 .nav-item {
   display: inline-block;
-  margin-right: 1em;
+  margin-right: var(--unit);
 }
 .nav-item a[href]:not(:hover) {
   text-decoration: none;
@@ -181,7 +211,7 @@ pre {
 }
 .postlist-date,
 .postlist-item:before {
-  font-size: 0.8125em; /* 13px /16 */
+  font-size: 13px;
   color: var(--darkgray);
 }
 .postlist-date {
@@ -189,13 +219,13 @@ pre {
 }
 .postlist-link {
   display: inline-block;
-  padding: 0.25em 0.1875em; /* 4px 3px /16 */
+  padding: 4px 3px;
 }
 .postlist-item-active .postlist-link {
   font-weight: bold;
 }
 .tmpl-home .postlist-link {
-  font-size: 1.1875em; /* 19px /16 */
+  font-size: 19px;
   font-weight: 700;
 }
 
@@ -204,12 +234,12 @@ pre {
   display: inline-block;
   vertical-align: text-top;
   text-transform: uppercase;
-  font-size: 0.625em; /* 10px /16 */
+  font-size: 10px;
   padding: 2px 4px;
-  margin-left: 0.8em; /* 8px /10 */
+  margin-left: 8px;
   background-color: var(--red);
   color: var(--white);
-  border-radius: 0.25em; /* 3px /12 */
+  border-radius: 3px;
   text-decoration: none;
 }
 a[href].post-tag,
@@ -220,7 +250,7 @@ a[href].post-tag:visited {
 /* Warning */
 .warning {
   background-color: #ffc;
-  padding: 1em 0.625em; /* 16px 10px /16 */
+  padding: var(--unit) calc(var(--unit) / 2);
 }
 .warning ol:only-child {
   margin: 0;

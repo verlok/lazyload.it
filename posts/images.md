@@ -24,7 +24,7 @@ Make it lazy by changing `src` to `data-src` and also adding a `lazy` class to i
   alt="A lazy image" />
 ```
 
-Add vanilla-lazyload via a `script` tag, if you don't have it already.
+Add [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) via a `script` tag, if you don't have it already.
 
 ```html
 <script

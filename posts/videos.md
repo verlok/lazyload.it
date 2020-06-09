@@ -4,7 +4,6 @@ description: How to lazy load videos on your website
 date: 2020-06-05
 tags:
   - videos
-  - lazyload
 layout: layouts/post.njk
 ---
 
@@ -48,7 +47,7 @@ Add [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload) via a `script
 And initialize it with the `new` keyword, eventually passing some options:
 
 ```js
-var lazyLoadInstance = new LazyLoad({
+var myLL = new LazyLoad({
   elements_selector: ".lazy",
 });
 ```

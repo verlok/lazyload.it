@@ -7,10 +7,13 @@ eleventyNavigation:
 
 <h1>Lazy-load it!</h1>
 
-<p>Here you can find tutorials, techniques and best practices to lazy-load pretty much everything is not immediately visible to your users, to optimize performance on your websites while preserving SEO.</p>
+<p>Tutorials, techniques and best practices to <strong>lazy-load anything</strong> that is below-the-fold, off-viewport or displayed later to your users, to optimize your websites' speed and preserve <abbr title="Search Engine Optimization">SEO</abbr>.</p>
 
-{% set postslist = collections.posts | head(-3) %}
+{# {% set postslist = collections.posts | head(-3) %} #}
+{% set postslist = collections.posts %}
 {% set postslistCounter = collections.posts | length %}
 {% include "postslist.njk" %}
 
-<p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p>
+<p>All articles in this list use the <a href="https://github.com/verlok/vanilla-lazyload">vanilla-lazyload</a> script.</p>
+
+{# <p>More posts can be found in <a href="{{ '/posts/' | url }}">the archive</a>.</p> #}

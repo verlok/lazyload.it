@@ -109,6 +109,9 @@ pre {
   margin: 0.5em 0;
   background-color: #f6f6f6;
 }
+strong {
+  font-weight: normal;
+}
 :not(pre) > code {
   padding: 0.2em 0.3em;
   background-color: #eee;
